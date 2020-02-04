@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Search</title>
+    <title>My issue isn't downloading or is not responding, what can I do?</title>
     <link rel="icon" type="image/png" href="http://localhost:4000/app-support-ios/favicon-32x32.png" sizes="32x32" />
     <link rel="stylesheet" href="http://localhost:4000/app-support-ios/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -69,22 +69,43 @@
   </ul>
 </nav>
 
-<div class="component component-search">
-  <h2>Ask a question</h2>
-  <form method="GET" action="http://localhost:4000/app-support-ios/search-results.html">
-    <div class="row gutters-tablet-and-up">
-      <div class="col-md-10 col-10 col-query">
-        <input type="search" class="form-control" name="query" placeholder="e.g. how do I..." />
+
+<h2>My issue isn't downloading or is not responding, what can I do?</h2>
+
+<div class="content single-article">
+  <p>To remove an issue from your device follow these steps:</p>
+
+<ol>
+  <li>Open the app menu and tap “Downloaded Issues”</li>
+  <li>In the Downloaded Issues screen, tap “Edit” in the top right corner</li>
+  <li>Select the issue(s) you want to archive by tapping the small circle to the left of the cover image</li>
+  <li>Tap Remove” in the bottom right corner</li>
+</ol>
+
+<p>You can always download any issues you already own, they will be available to you forever.</p>
+
+</div>
+
+
+  <aside class="article-aside">
+  <h3>Already tried this?</h3>
+  <p>If you are still experiencing the problem, contact support using any of the options below.</p>
+  <div class="container col-2-buttons">
+    <div class="row">
+      <div class="col-md">
+        <a href="#" class="btn btn-primary">
+          <i class="fa fa-phone" aria-hidden="true"></i> Call 0800 123 4567
+        </a>
       </div>
-      <div class="col-md-2 col-2 col-submit">
-        <button type="submit" class="btn btn-primary btn-search">
-          <i class="fa fa-search mobile-only" aria-hidden="true"></i>
-          <span class="tablet-and-up">Search</span>
-        </button>
+      <div class="col-md">
+        <a href="http://localhost:4000/app-support-ios/submit-request.html" class="btn btn-primary">
+          <i class="fa fa-envelope" aria-hidden="true"></i> Submit a support request
+        </a>
       </div>
     </div>
-  </form>
-</div>
+  </div>
+</aside>
+
 
 
           </div>
@@ -182,6 +203,25 @@
 
     
 
+<script>
+
+  window.post = {
+    title: 'My issue isn't downloading or is not responding, what can I do?',
+    tags: []
+  };
+
+  
+    window.post.tags.push('subscriptions');
+  
+    window.post.tags.push('singleissues');
+  
+    window.post.tags.push('promotions');
+  
+
+</script>
+
+
+
     <script>
   window.tags = {};
   
@@ -200,8 +240,8 @@
     <script>
 
   window.page = {
-    layout: 'default',
-    url: '/search.html'
+    layout: 'post',
+    url: '/2019/09/10/my-issue-isnt-downloading-or-not-responding-what-can-i-do.html'
   };
 
 </script>
@@ -229,7 +269,7 @@
     Accessibility.init();
     Branding.init();
     Navigation.init({
-      layout: 'default',
+      layout: 'post',
       tag: '',
       postData: window.post,
     });

@@ -52,7 +52,25 @@
         <div class="row">
           <div class="col-12">
             <h1 class="masthead__title">iOS App Support</h1>
-            <h2>Search results</h2>
+            <nav aria-label="breadcrumb">
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="/app-support-ios/">Home</a>
+    </li>
+    <li class="breadcrumb-item" v-if="categoryText && categoryText.length">
+      <template v-if="categoryLink.length">
+        <a v-bind:href="categoryLink">(( categoryText ))</a>
+      </template>
+      <template v-else>
+        (( categoryText ))
+      </template>
+    </li>
+    <li class="breadcrumb-item" v-if="isSearchPage">Search</li>
+  </ul>
+</nav>
+
+
+<h2>Search results</h2>
 
 <h3>Showing results for: <em class="search-query"></em></h3>
 
@@ -85,9 +103,9 @@
 
       {
         title: `Will I be charged twice if I delete or lose an issue and want to get it again?`,
-        content: `<p>No. Any previous purchases you have made will be recorded in your purchase history. Please see “How do I restore my previous purchases”.</p>
+        content: `<p>No. Any previous purchases you have made will be recorded in your purchase history. Please see <a href="/app-support-ios/2019/09/10/how-do-i-restore-my-previous-purchases.html">How do I restore my previous purchases</a>.</p>
 `,
-        url: `http://localhost:4000/app-support-ios/singleissues/2019/09/10/will-i-be-charged-twice-if-i-delete-or-lose-an-issue-and-want-to-get-it-again.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/will-i-be-charged-twice-if-i-delete-or-lose-an-issue-and-want-to-get-it-again.html`,
         popular: false,
       },
 
@@ -97,13 +115,21 @@
         title: `Where have all my purchased issues gone?`,
         content: `<p>Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.</p>
 
-<ol>
-  <li>Open the App menu</li>
-  <li>Tap ‘Manage Account’</li>
-  <li>Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</li>
-</ol>
+<h4 id="what-you-need-to-do">What you need to do</h4>
+
+<p><strong>1.</strong> Open the App menu</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-menu-icon.png" alt="Open the app menu" /></p>
+
+<p><strong>2.</strong> Tap ‘Manage Account’</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-manage-account.png" alt="Open the app menu" /></p>
+
+<p><strong>3.</strong> Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-restore-purchases.png" alt="Open the app menu" /></p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/singleissues/promotions/2019/09/10/where-have-all-my-purchased-issues-gone.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/where-have-all-my-purchased-issues-gone.html`,
         popular: false,
       },
 
@@ -113,7 +139,7 @@
         title: `When my digital subscription expires, do I keep the issues?`,
         content: `<p>Yes, you own the issues for as long as you hold the account with Apple and use the associated Apple ID</p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/subscriptionquestions/2019/09/10/when-my-digital-subscription-expires-do-i-keep-the-issues.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/when-my-digital-subscription-expires-do-i-keep-the-issues.html`,
         popular: false,
       },
 
@@ -121,9 +147,9 @@
 
       {
         title: `When does my subscription renew?`,
-        content: `<p>You can view your Apple subscriptions via your account. For more information please visit https://support.apple.com/en-gb/HT202039</p>
+        content: `<p>You can view your Apple subscriptions via your account. For more information please visit <a href="https://support.apple.com/en-gb/HT202039">https://support.apple.com/en-gb/HT202039</a></p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/subscriptionquestions/2019/09/10/when-does-my-subscription-renew.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/when-does-my-subscription-renew.html`,
         popular: false,
       },
 
@@ -135,7 +161,7 @@
 
 <p>If you are sure that the app isn’t showing the latest issue, there may be a problem caused by some corrupted data. You should try deleting and reinstalling the app.</p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/2019/09/10/the-latest-issue-hasnt-appeared-in-the-app.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/the-latest-issue-hasnt-appeared-in-the-app.html`,
         popular: false,
       },
 
@@ -154,7 +180,7 @@
 
 <p>You can always download any issues you already own, they will be available to you forever.</p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/singleissues/promotions/2019/09/10/my-issue-isnt-downloading-or-not-responding-what-can-i-do.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/my-issue-isnt-downloading-or-not-responding-what-can-i-do.html`,
         popular: false,
       },
 
@@ -164,13 +190,21 @@
         title: `I'm missing some of my purchased issues`,
         content: `<p>Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.</p>
 
-<ol>
-  <li>Open the App menu</li>
-  <li>Tap ‘Manage Account’</li>
-  <li>Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</li>
-</ol>
+<h4 id="what-you-need-to-do">What you need to do</h4>
+
+<p><strong>1.</strong> Open the App menu</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-menu-icon.png" alt="Open the app menu" /></p>
+
+<p><strong>2.</strong> Tap ‘Manage Account’</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-manage-account.png" alt="Open the app menu" /></p>
+
+<p><strong>3.</strong> Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-restore-purchases.png" alt="Open the app menu" /></p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/singleissues/promotions/2019/09/10/im-missing-some-of-my-purchased-issues.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/im-missing-some-of-my-purchased-issues.html`,
         popular: false,
       },
 
@@ -180,7 +214,7 @@
         title: `If I delete an issue from my device, how do I get it back?`,
         content: `<p>You can always download any issues you already own, they will be available to you forever. All you need to do is tap the cloud icon.</p>
 `,
-        url: `http://localhost:4000/app-support-ios/other/2019/09/10/if-i-delete-an-issue-from-my-device-how-do-i-get-it-back.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/if-i-delete-an-issue-from-my-device-how-do-i-get-it-back.html`,
         popular: false,
       },
 
@@ -188,9 +222,9 @@
 
       {
         title: `I want to unsubscribe`,
-        content: `<p>Unfortunately, we cannot do this on your behalf. You’ll need to manage subscriptions via your account. For more information please visit https://support.apple.com/en-gb/HT202039</p>
+        content: `<p>Unfortunately, we cannot do this on your behalf. You’ll need to manage subscriptions via your account. For more information please visit <a href="https://support.apple.com/en-gb/HT202039">https://support.apple.com/en-gb/HT202039</a></p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/2019/09/10/i-want-to-unsubscribe.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/i-want-to-unsubscribe.html`,
         popular: false,
       },
 
@@ -200,7 +234,7 @@
         title: `I want to turn off auto renew`,
         content: `<p>Unfortunately, we cannot do this on your behalf. You’ll need to manage subscriptions via your account. For more information please visit <a href="https://support.apple.com/en-gb/HT202039">https://support.apple.com/en-gb/HT202039</a></p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/2019/09/10/i-want-to-turn-off-autorenew.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/i-want-to-turn-off-autorenew.html`,
         popular: false,
       },
 
@@ -214,7 +248,7 @@
 
 <p>You should always take care to read information on transactional popups before you purchase.</p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/2019/09/10/i-signed-up-for-a-free-trial-but-got-charged-straight-away.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/i-signed-up-for-a-free-trial-but-got-charged-straight-away.html`,
         popular: false,
       },
 
@@ -224,13 +258,21 @@
         title: `I got a new device but some of my purchases are missing`,
         content: `<p>Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.</p>
 
-<ol>
-  <li>Open the App menu</li>
-  <li>Tap ‘Manage Account’</li>
-  <li>Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</li>
-</ol>
+<h4 id="what-you-need-to-do">What you need to do</h4>
+
+<p><strong>1.</strong> Open the App menu</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-menu-icon.png" alt="Open the app menu" /></p>
+
+<p><strong>2.</strong> Tap ‘Manage Account’</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-manage-account.png" alt="Open the app menu" /></p>
+
+<p><strong>3.</strong> Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-restore-purchases.png" alt="Open the app menu" /></p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/singleissues/promotions/2019/09/10/i-got-new-device-but-some-of-my-purchases-are-missing.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/i-got-new-device-but-some-of-my-purchases-are-missing.html`,
         popular: false,
       },
 
@@ -240,7 +282,7 @@
         title: `I forgot my password`,
         content: `<p>To reset your Apple ID password go to <a href="https://iforgot.apple.com/password/verify/appleid">https://iforgot.apple.com/password/verify/appleid</a></p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/singleissues/other/2019/09/10/i-forgot-my-password.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/i-forgot-my-password.html`,
         popular: true,
       },
 
@@ -252,7 +294,7 @@
 
 <p>The other way you could have subscribed is via our online website buysubscriptions.com. You should have an account set up with your email address. It may also be that you had a subscription as a gift through buysubscriptions.com. If so, the account may be in their name.</p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/2019/09/10/i-dont-know-how-i-subscribed.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/i-dont-know-how-i-subscribed.html`,
         popular: false,
       },
 
@@ -262,13 +304,21 @@
         title: `I can see my issues on my iPhone but not on my iPad`,
         content: `<p>Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.</p>
 
-<ol>
-  <li>Open the App menu</li>
-  <li>Tap ‘Manage Account’</li>
-  <li>Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</li>
-</ol>
+<h4 id="what-you-need-to-do">What you need to do</h4>
+
+<p><strong>1.</strong> Open the App menu</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-menu-icon.png" alt="Open the app menu" /></p>
+
+<p><strong>2.</strong> Tap ‘Manage Account’</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-manage-account.png" alt="Open the app menu" /></p>
+
+<p><strong>3.</strong> Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-restore-purchases.png" alt="Open the app menu" /></p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/singleissues/promotions/2019/09/10/i-can-see-my-issues-on-my-iphone-but-not-my-ipad.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/i-can-see-my-issues-on-my-iphone-but-not-my-ipad.html`,
         popular: false,
       },
 
@@ -278,13 +328,21 @@
         title: `I can see my issues on my iPad but not on my iPhone`,
         content: `<p>Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.</p>
 
-<ol>
-  <li>Open the App menu</li>
-  <li>Tap ‘Manage Account’</li>
-  <li>Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</li>
-</ol>
+<h4 id="what-you-need-to-do">What you need to do</h4>
+
+<p><strong>1.</strong> Open the App menu</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-menu-icon.png" alt="Open the app menu" /></p>
+
+<p><strong>2.</strong> Tap ‘Manage Account’</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-manage-account.png" alt="Open the app menu" /></p>
+
+<p><strong>3.</strong> Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-restore-purchases.png" alt="Open the app menu" /></p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/singleissues/promotions/2019/09/10/i-can-see-my-issues-on-my-ipad-but-not-on-my-iphone.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/i-can-see-my-issues-on-my-ipad-but-not-on-my-iphone.html`,
         popular: false,
       },
 
@@ -308,7 +366,7 @@
 
 <p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-restore-purchases.png" alt="Open the app menu" /></p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/2019/09/10/i-bought-a-subscription-but-the-app-is-asking-me-to-pay-for-issues.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/i-bought-a-subscription-but-the-app-is-asking-me-to-pay-for-issues.html`,
         popular: true,
       },
 
@@ -318,7 +376,7 @@
         title: `I bought a single issue but the app is asking me to pay for it`,
         content: `<p>Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.</p>
 
-<h3 id="what-you-need-to-do">What you need to do</h3>
+<h4 id="what-you-need-to-do">What you need to do</h4>
 
 <p><strong>1.</strong> Open the App menu</p>
 
@@ -332,7 +390,7 @@
 
 <p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-restore-purchases.png" alt="Open the app menu" /></p>
 `,
-        url: `http://localhost:4000/app-support-ios/singleissues/2019/09/10/i-bought-a-single-issue-but-the-app-is-asking-me-to-pay-for-it.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/i-bought-a-single-issue-but-the-app-is-asking-me-to-pay-for-it.html`,
         popular: false,
       },
 
@@ -342,7 +400,7 @@
         title: `How do I view my subscription?`,
         content: `<p>You can view your Apple subscriptions via your account. For more information please visit <a href="https://support.apple.com/en-gb/HT202039">https://support.apple.com/en-gb/HT202039</a></p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/2019/09/10/how-do-i-view-my-subscription.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/how-do-i-view-my-subscription.html`,
         popular: false,
       },
 
@@ -352,13 +410,21 @@
         title: `How do I restore my previous purchases?`,
         content: `<p>Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.</p>
 
-<ol>
-  <li>Open the App menu</li>
-  <li>Tap ‘Manage Account’</li>
-  <li>Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</li>
-</ol>
+<h4 id="what-you-need-to-do">What you need to do</h4>
+
+<p><strong>1.</strong> Open the App menu</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-menu-icon.png" alt="Open the app menu" /></p>
+
+<p><strong>2.</strong> Tap ‘Manage Account’</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-manage-account.png" alt="Open the app menu" /></p>
+
+<p><strong>3.</strong> Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-restore-purchases.png" alt="Open the app menu" /></p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/singleissues/promotions/2019/09/10/how-do-i-restore-my-previous-purchases.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/how-do-i-restore-my-previous-purchases.html`,
         popular: false,
       },
 
@@ -368,7 +434,7 @@
         title: `How do I manage my subscription?`,
         content: `<p>You can view your Apple subscriptions via your account. For more information please visit <a href="https://support.apple.com/en-gb/HT202039">https://support.apple.com/en-gb/HT202039</a></p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/2019/09/10/how-do-i-manage-my-subscription.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/how-do-i-manage-my-subscription.html`,
         popular: false,
       },
 
@@ -378,7 +444,7 @@
         title: `How do I get the cover gift?`,
         content: `<p>As you might expect, cover gifts and other free items that come with the print edition aren’t included with the digital edition. In general, we don’t offer a way to get cover gifts but, if we do, instructions will be added in the digital edition</p>
 `,
-        url: `http://localhost:4000/app-support-ios/other/subscriptionquestions/2019/09/10/how-do-i-get-the-cover-gift.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/how-do-i-get-the-cover-gift.html`,
         popular: true,
       },
 
@@ -397,7 +463,7 @@
 
 <p>You can always download any issues you already own, they will be available to you forever.</p>
 `,
-        url: `http://localhost:4000/app-support-ios/other/2019/09/10/how-do-i-archive-or-delete-an-issue-from-my-device.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/how-do-i-archive-or-delete-an-issue-from-my-device.html`,
         popular: false,
       },
 
@@ -407,7 +473,7 @@
         title: `How can I download the issue to use outside of the app?`,
         content: `<p>You cannot download any charts, patterns or other pages outside of the app. However, we do offer air printing with our craft apps. See “How can I print charts and patterns?”</p>
 `,
-        url: `http://localhost:4000/app-support-ios/other/2019/09/10/how-can-i-download-the-issue-to-use-outside-of-the-app.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/how-can-i-download-the-issue-to-use-outside-of-the-app.html`,
         popular: false,
       },
 
@@ -417,7 +483,7 @@
         title: `How can I download the issue to send to a friend?`,
         content: `<p>You cannot download any charts, patterns or other pages outside of the app. However, we do offer air printing with our craft apps. See “How can I print charts and patterns?”</p>
 `,
-        url: `http://localhost:4000/app-support-ios/other/2019/09/10/how-can-i-download-the-issue-to-send-to-a-friend.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/how-can-i-download-the-issue-to-send-to-a-friend.html`,
         popular: false,
       },
 
@@ -427,7 +493,7 @@
         title: `How can I download the issue to save in my archive?`,
         content: `<p>You cannot download any charts, patterns or other pages outside of the app. However, we do offer air printing with our craft apps. See “How can I print charts and patterns?”</p>
 `,
-        url: `http://localhost:4000/app-support-ios/singleissues/other/2019/09/10/how-can-i-download-the-issue-to-save-in-my-archive.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/how-can-i-download-the-issue-to-save-in-my-archive.html`,
         popular: false,
       },
 
@@ -437,7 +503,7 @@
         title: `How can I download a pattern or chart?`,
         content: `<p>You cannot download any charts, patterns or other pages outside of the app. However, we do offer air printing with our craft apps. See “How can I print charts and patterns?”</p>
 `,
-        url: `http://localhost:4000/app-support-ios/other/2019/09/10/how-can-i-download-a-pattern-or-chart.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/how-can-i-download-a-pattern-or-chart.html`,
         popular: false,
       },
 
@@ -445,9 +511,9 @@
 
       {
         title: `How can I claim a refund if I'm not happy with something I've purchased?`,
-        content: `<p>For transactions made through the App Store (In App Purchases) we are not able to issue refunds. For information on how to claim a refund from Apple please visit https://support.apple.com/en-gb/HT204088</p>
+        content: `<p>For transactions made through the App Store (In App Purchases) we are not able to issue refunds. For information on how to claim a refund from Apple please visit <a href="https://support.apple.com/en-gb/HT204088">https://support.apple.com/en-gb/HT204088</a></p>
 `,
-        url: `http://localhost:4000/app-support-ios/subscriptions/singleissues/promotions/2019/09/10/how-can-i-claim-a-refund-if-im-not-happy-with-something-ive-purchased.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/how-can-i-claim-a-refund-if-im-not-happy-with-something-ive-purchased.html`,
         popular: false,
       },
 
@@ -457,7 +523,7 @@
         title: `All / Some of the pages are blurry`,
         content: `<p>Unfortunately, sometimes files can get corrupted during download. When this happens, removing the issue and downloading it again will resolve the problem. Please see <a href="/support-prototype/2019-09-10-how-do-i-archive-or-delete-an-issue-from-my-device">“How do I archive or delete an issue from my device?”</a></p>
 `,
-        url: `http://localhost:4000/app-support-ios/other/2019/09/10/all-some-of-the-pages-are-blurry.html`,
+        url: `http://localhost:4000/app-support-ios/2019/09/10/all-some-of-the-pages-are-blurry.html`,
         popular: false,
       },
 
@@ -554,6 +620,40 @@
   
 </script>
 
+    <script>
+
+  window.site = {
+    baseurl: '/app-support-ios',
+  };
+
+</script>
+
+    
+
+    <script>
+  window.tags = {};
+  
+    window.tags['subscriptions'] = 'Subscriptions';
+  
+    window.tags['singleissues'] = 'Single issues';
+  
+    window.tags['promotions'] = 'Promotions';
+  
+    window.tags['other'] = 'Other';
+  
+    window.tags['subscriptionquestions'] = 'Questions about subscriptions';
+  
+</script>
+
+    <script>
+
+  window.page = {
+    layout: 'default',
+    url: '/search-results.html'
+  };
+
+</script>
+
 
     
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -569,11 +669,18 @@
     <script src="http://localhost:4000/app-support-ios/js/modules/session.js"></script>
     <script src="http://localhost:4000/app-support-ios/js/modules/accessibility.js"></script>
     <script src="http://localhost:4000/app-support-ios/js/modules/support-form.js"></script>
+    <script src="http://localhost:4000/app-support-ios/js/modules/navigation.js"></script>
+    <script src="http://localhost:4000/app-support-ios/js/modules/breadcrumb.js"></script>
 
     <script>
 
     Accessibility.init();
     Branding.init();
+    Navigation.init({
+      layout: 'default',
+      tag: '',
+      postData: window.post,
+    });
 
     // fetch the parameters passed via URL
     var urlParams = new URLSearchParams(window.location.search);

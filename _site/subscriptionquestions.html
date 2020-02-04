@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Search</title>
+    <title></title>
     <link rel="icon" type="image/png" href="http://localhost:4000/app-support-ios/favicon-32x32.png" sizes="32x32" />
     <link rel="stylesheet" href="http://localhost:4000/app-support-ios/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -69,22 +69,67 @@
   </ul>
 </nav>
 
-<div class="component component-search">
-  <h2>Ask a question</h2>
-  <form method="GET" action="http://localhost:4000/app-support-ios/search-results.html">
-    <div class="row gutters-tablet-and-up">
-      <div class="col-md-10 col-10 col-query">
-        <input type="search" class="form-control" name="query" placeholder="e.g. how do I..." />
-      </div>
-      <div class="col-md-2 col-2 col-submit">
-        <button type="submit" class="btn btn-primary btn-search">
-          <i class="fa fa-search mobile-only" aria-hidden="true"></i>
-          <span class="tablet-and-up">Search</span>
-        </button>
-      </div>
-    </div>
-  </form>
-</div>
+<h2>Subscription questions</h2>
+
+<ul class="link-list hide-dots use-icons">
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      <li class="link-list__item"><a href="#post-when-my-digital-subscription-expires-do-i-keep-the-issues"><i class="link-list__icon fa fa-question-circle"></i>When my digital subscription expires, do I keep the issues?</a></li>
+    
+      <li class="link-list__item"><a href="#post-when-does-my-subscription-renew"><i class="link-list__icon fa fa-question-circle"></i>When does my subscription renew?</a></li>
+    
+      <li class="link-list__item"><a href="#post-how-do-i-get-the-cover-gift"><i class="link-list__icon fa fa-question-circle"></i>How do I get the cover gift?</a></li>
+    
+  
+
+</ul>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      <article id="post-when-my-digital-subscription-expires-do-i-keep-the-issues" class="article-full">
+        <h3>When my digital subscription expires, do I keep the issues?</h3>
+        <p>Yes, you own the issues for as long as you hold the account with Apple and use the associated Apple ID</p>
+
+        
+      </article>
+      <hr />
+    
+      <article id="post-when-does-my-subscription-renew" class="article-full">
+        <h3>When does my subscription renew?</h3>
+        <p>You can view your Apple subscriptions via your account. For more information please visit <a href="https://support.apple.com/en-gb/HT202039">https://support.apple.com/en-gb/HT202039</a></p>
+
+        
+      </article>
+      <hr />
+    
+      <article id="post-how-do-i-get-the-cover-gift" class="article-full">
+        <h3>How do I get the cover gift?</h3>
+        <p>As you might expect, cover gifts and other free items that come with the print edition aren’t included with the digital edition. In general, we don’t offer a way to get cover gifts but, if we do, instructions will be added in the digital edition</p>
+
+        
+      </article>
+      <hr />
+    
+  
+
 
 
           </div>
@@ -200,8 +245,8 @@
     <script>
 
   window.page = {
-    layout: 'default',
-    url: '/search.html'
+    layout: 'tag',
+    url: '/subscriptionquestions.html'
   };
 
 </script>
@@ -229,8 +274,8 @@
     Accessibility.init();
     Branding.init();
     Navigation.init({
-      layout: 'default',
-      tag: '',
+      layout: 'tag',
+      tag: 'subscriptionquestions',
       postData: window.post,
     });
 

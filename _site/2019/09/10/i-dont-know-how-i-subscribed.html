@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Search</title>
+    <title>I don't know how I subscribed</title>
     <link rel="icon" type="image/png" href="http://localhost:4000/app-support-ios/favicon-32x32.png" sizes="32x32" />
     <link rel="stylesheet" href="http://localhost:4000/app-support-ios/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -69,22 +69,16 @@
   </ul>
 </nav>
 
-<div class="component component-search">
-  <h2>Ask a question</h2>
-  <form method="GET" action="http://localhost:4000/app-support-ios/search-results.html">
-    <div class="row gutters-tablet-and-up">
-      <div class="col-md-10 col-10 col-query">
-        <input type="search" class="form-control" name="query" placeholder="e.g. how do I..." />
-      </div>
-      <div class="col-md-2 col-2 col-submit">
-        <button type="submit" class="btn btn-primary btn-search">
-          <i class="fa fa-search mobile-only" aria-hidden="true"></i>
-          <span class="tablet-and-up">Search</span>
-        </button>
-      </div>
-    </div>
-  </form>
+
+<h2>I don't know how I subscribed</h2>
+
+<div class="content single-article">
+  <p>If you subscribed by tapping a button in the app, your subscription will be with Apple. You can view your Apple subscriptions via your account please visit <a href="https://support.apple.com/en-gb/HT202039">https://support.apple.com/en-gb/HT202039</a></p>
+
+<p>The other way you could have subscribed is via our online website buysubscriptions.com. You should have an account set up with your email address. It may also be that you had a subscription as a gift through buysubscriptions.com. If so, the account may be in their name.</p>
+
 </div>
+
 
 
           </div>
@@ -182,6 +176,21 @@
 
     
 
+<script>
+
+  window.post = {
+    title: 'I don't know how I subscribed',
+    tags: []
+  };
+
+  
+    window.post.tags.push('subscriptions');
+  
+
+</script>
+
+
+
     <script>
   window.tags = {};
   
@@ -200,8 +209,8 @@
     <script>
 
   window.page = {
-    layout: 'default',
-    url: '/search.html'
+    layout: 'post',
+    url: '/2019/09/10/i-dont-know-how-i-subscribed.html'
   };
 
 </script>
@@ -229,7 +238,7 @@
     Accessibility.init();
     Branding.init();
     Navigation.init({
-      layout: 'default',
+      layout: 'post',
       tag: '',
       postData: window.post,
     });

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Search</title>
+    <title>How do I get the cover gift?</title>
     <link rel="icon" type="image/png" href="http://localhost:4000/app-support-ios/favicon-32x32.png" sizes="32x32" />
     <link rel="stylesheet" href="http://localhost:4000/app-support-ios/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -69,22 +69,14 @@
   </ul>
 </nav>
 
-<div class="component component-search">
-  <h2>Ask a question</h2>
-  <form method="GET" action="http://localhost:4000/app-support-ios/search-results.html">
-    <div class="row gutters-tablet-and-up">
-      <div class="col-md-10 col-10 col-query">
-        <input type="search" class="form-control" name="query" placeholder="e.g. how do I..." />
-      </div>
-      <div class="col-md-2 col-2 col-submit">
-        <button type="submit" class="btn btn-primary btn-search">
-          <i class="fa fa-search mobile-only" aria-hidden="true"></i>
-          <span class="tablet-and-up">Search</span>
-        </button>
-      </div>
-    </div>
-  </form>
+
+<h2>How do I get the cover gift?</h2>
+
+<div class="content single-article">
+  <p>As you might expect, cover gifts and other free items that come with the print edition aren’t included with the digital edition. In general, we don’t offer a way to get cover gifts but, if we do, instructions will be added in the digital edition</p>
+
 </div>
+
 
 
           </div>
@@ -182,6 +174,23 @@
 
     
 
+<script>
+
+  window.post = {
+    title: 'How do I get the cover gift?',
+    tags: []
+  };
+
+  
+    window.post.tags.push('other');
+  
+    window.post.tags.push('subscriptionquestions');
+  
+
+</script>
+
+
+
     <script>
   window.tags = {};
   
@@ -200,8 +209,8 @@
     <script>
 
   window.page = {
-    layout: 'default',
-    url: '/search.html'
+    layout: 'post',
+    url: '/2019/09/10/how-do-i-get-the-cover-gift.html'
   };
 
 </script>
@@ -229,7 +238,7 @@
     Accessibility.init();
     Branding.init();
     Navigation.init({
-      layout: 'default',
+      layout: 'post',
       tag: '',
       postData: window.post,
     });

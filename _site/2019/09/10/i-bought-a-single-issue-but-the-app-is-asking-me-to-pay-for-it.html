@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Search</title>
+    <title>I bought a single issue but the app is asking me to pay for it</title>
     <link rel="icon" type="image/png" href="http://localhost:4000/app-support-ios/favicon-32x32.png" sizes="32x32" />
     <link rel="stylesheet" href="http://localhost:4000/app-support-ios/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -69,22 +69,28 @@
   </ul>
 </nav>
 
-<div class="component component-search">
-  <h2>Ask a question</h2>
-  <form method="GET" action="http://localhost:4000/app-support-ios/search-results.html">
-    <div class="row gutters-tablet-and-up">
-      <div class="col-md-10 col-10 col-query">
-        <input type="search" class="form-control" name="query" placeholder="e.g. how do I..." />
-      </div>
-      <div class="col-md-2 col-2 col-submit">
-        <button type="submit" class="btn btn-primary btn-search">
-          <i class="fa fa-search mobile-only" aria-hidden="true"></i>
-          <span class="tablet-and-up">Search</span>
-        </button>
-      </div>
-    </div>
-  </form>
+
+<h2>I bought a single issue but the app is asking me to pay for it</h2>
+
+<div class="content single-article">
+  <p>Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.</p>
+
+<h4 id="what-you-need-to-do">What you need to do</h4>
+
+<p><strong>1.</strong> Open the App menu</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-menu-icon.png" alt="Open the app menu" /></p>
+
+<p><strong>2.</strong> Tap ‘Manage Account’</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-manage-account.png" alt="Open the app menu" /></p>
+
+<p><strong>3.</strong> Tap ‘Restore Purchases’ and enter your Apple ID password if prompted</p>
+
+<p><img src="http://localhost:4000/app-support-ios/img/screenshots/restore-purchases/tap-restore-purchases.png" alt="Open the app menu" /></p>
+
 </div>
+
 
 
           </div>
@@ -182,6 +188,21 @@
 
     
 
+<script>
+
+  window.post = {
+    title: 'I bought a single issue but the app is asking me to pay for it',
+    tags: []
+  };
+
+  
+    window.post.tags.push('singleissues');
+  
+
+</script>
+
+
+
     <script>
   window.tags = {};
   
@@ -200,8 +221,8 @@
     <script>
 
   window.page = {
-    layout: 'default',
-    url: '/search.html'
+    layout: 'post',
+    url: '/2019/09/10/i-bought-a-single-issue-but-the-app-is-asking-me-to-pay-for-it.html'
   };
 
 </script>
@@ -229,7 +250,7 @@
     Accessibility.init();
     Branding.init();
     Navigation.init({
-      layout: 'default',
+      layout: 'post',
       tag: '',
       postData: window.post,
     });

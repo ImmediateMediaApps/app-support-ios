@@ -163,6 +163,40 @@
   
 </script>
 
+    <script>
+
+  window.site = {
+    baseurl: '/app-support-ios',
+  };
+
+</script>
+
+    
+
+    <script>
+  window.tags = {};
+  
+    window.tags['subscriptions'] = 'Subscriptions';
+  
+    window.tags['singleissues'] = 'Single issues';
+  
+    window.tags['promotions'] = 'Promotions';
+  
+    window.tags['other'] = 'Other';
+  
+    window.tags['subscriptionquestions'] = 'Questions about subscriptions';
+  
+</script>
+
+    <script>
+
+  window.page = {
+    layout: 'default',
+    url: '/feedback.html'
+  };
+
+</script>
+
 
     
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -178,11 +212,18 @@
     <script src="http://localhost:4000/app-support-ios/js/modules/session.js"></script>
     <script src="http://localhost:4000/app-support-ios/js/modules/accessibility.js"></script>
     <script src="http://localhost:4000/app-support-ios/js/modules/support-form.js"></script>
+    <script src="http://localhost:4000/app-support-ios/js/modules/navigation.js"></script>
+    <script src="http://localhost:4000/app-support-ios/js/modules/breadcrumb.js"></script>
 
     <script>
 
     Accessibility.init();
     Branding.init();
+    Navigation.init({
+      layout: 'default',
+      tag: '',
+      postData: window.post,
+    });
 
     // fetch the parameters passed via URL
     var urlParams = new URLSearchParams(window.location.search);

@@ -62,6 +62,9 @@ li {
 a {
   color: #0354A0; }
 
+p {
+  overflow-wrap: break-word; }
+
 @media screen and (max-width: 767px) {
   .btn {
     width: 100%; } }
@@ -70,6 +73,8 @@ a {
   border-color: #0354A0; }
   .btn-primary i {
     color: #fff; }
+.btn-outline-primary:hover {
+  background-color: transparent; }
 
 @media screen and (max-width: 767px) {
   .table tbody td {
@@ -331,6 +336,9 @@ input[type="text"] {
         margin-bottom: 0; } }
   .col-2-buttons .btn {
     width: 100%; }
+
+.breadcrumb-item {
+  margin-bottom: 0; }
 
 .theme-blackyellow {
   background-color: #ffff00;
