@@ -2,7 +2,7 @@
 layout: post
 title: I signed up for a free trial but got charged straight away
 popular: false
-categories: [subscriptions]
+tags: [subscriptions]
 ---
 Free trials and Introductory Pricing are only available once on the chosen subscription term.
 

@@ -2,8 +2,9 @@
 layout: post
 title: I bought a subscription but the app is asking me to pay for my issue(s)
 popular: false
-categories: [subscriptions]
+tags: [subscriptions]
 popular: true
+showcontact: true
 ---
 Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.
 

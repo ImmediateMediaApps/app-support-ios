@@ -2,12 +2,12 @@
 layout: post
 title: I bought a single issue but the app is asking me to pay for it
 popular: false
-categories: [singleissues]
+tags: [singleissues]
 popular: false
 ---
 Any previous purchases you have made will be tied to your Apple ID. You can restore your previous purchases at any time.
 
-### What you need to do
+#### What you need to do
 
 **1.** Open the App menu
 
