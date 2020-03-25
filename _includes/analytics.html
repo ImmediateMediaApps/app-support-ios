@@ -1,9 +1,16 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54289516-23"></script>
 <script>
+
+  function pageURLWithoutQueryParams() {
+    return window.location.origin + window.location.pathname;
+  }
+
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-54289516-23');
+  gtag('config', 'UA-54289516-23', {
+    'page_location': pageURLWithoutQueryParams(),
+  });
 </script>
